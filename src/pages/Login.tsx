@@ -11,8 +11,7 @@ function Login() {
 
   return (
     <div>
-      <div className='firstBox'>
-
+      <div className='firstBoxContainer'>
         <div className='instagramLogo'>
           <button onClick={gotoMain}>
             instagram

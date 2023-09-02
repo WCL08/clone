@@ -6,7 +6,7 @@ function Login() {
 
   const navigate = useNavigate();
   const gotoMain = () => {
-      navigate('/')
+      navigate('/Main')
     }
 
   return (

@@ -1,13 +1,26 @@
 .firstBoxContainer{
-    margin: 40px auto;
-    border: 1px solid black;
+    margin: 40px auto 0px auto;
+    border: 1px solid #dfdfdf;
     height: 400px;
     width: 350px;
 }
+.instagramLogo{
+    margin: 20px auto;
+    width: 200px;
+    // border: 2px solid red;
+}
+.instaLogoBtn{
+    width: 100px;
+    background-color: white;
+    border: 0px;
+    cursor: pointer;
+}
+.instaLogo{
+    width: 200px;
+}
 .secondBox{
-    margin: 0px auto;
-    border: 1px solid black;
+    margin: 10px auto;
+    border: 1px solid #dfdfdf;
     height: 65px;
     width: 350px;
-    margin-top: 10px;
 }

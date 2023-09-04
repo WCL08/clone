@@ -10,7 +10,9 @@ function Main() {
   return (
     <div>
       Main
-      <button onClick={gotoLogin}>
+      <button 
+      type='button'
+      onClick={gotoLogin}>
         gotoLogin
       </button>
     </div>

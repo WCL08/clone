@@ -1,12 +1,29 @@
-import React from 'react'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import React, { useState,useEffect  } from 'react'
 import { useNavigate } from 'react-router-dom';
 import '../styles/_Join.scss'
+// import axios from 'axios';
 import instagram from '../images/instagram.png'
 import Button from '../components/Button';
 
 function Login() {
 
   const navigate = useNavigate();
+  const [inputId, setInputId] = useState('')
+  const [inputPw, setInputPw] = useState('')
+
+// useEffect(() => {
+//   axios.get('/user_inform/login')
+//   .then(res => console.log(res))
+//   .catch()
+// },[])
+    const handleInputId = (e: { target: { value: React.SetStateAction<string>; }; }) => {
+      setInputId(e.target.value)
+  }
+
+  const handleInputPw = (e: { target: { value: React.SetStateAction<string>; }; }) => {
+      setInputPw(e.target.value)
+  }
   const gotoMain = () => {
     navigate('/Main')
   }
@@ -29,8 +46,10 @@ function Login() {
           </button>
         </div>
         <div className='loginBox'>
-          <input className='loginInput' placeholder='전화번호, 사용자 이름 또는 이메일' /><br />
-          <input className='loginInput' placeholder='비밀번호' /><br />
+          <input className='loginInput'
+          type='text' name='input_id' value={inputId} onChange={handleInputId} placeholder='전화번호, 사용자 이름 또는 이메일' /><br />
+          <input className='loginInput'
+          type='password' name='input_pw' value={inputPw} onChange={handleInputPw} placeholder='비밀번호' /><br />
           <Button
             className='addAccountBtn'
             onClick={handleClick}>로그인

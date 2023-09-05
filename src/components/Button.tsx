@@ -1,13 +1,28 @@
-import React from 'react'
-// import { useNavigate } from 'react-router-dom';
+import React, { ReactNode } from 'react';
+import "../styles/_Button.scss"
 
-function Button() {
-    // const navigate = useNavigate();
+type ButtonChildren = {
+  children: ReactNode;
+  className: string;
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  disabled?: boolean;
+};
+
+function Button({ children, className, onClick, disabled }: ButtonChildren) {
   return (
-    <div>
-      Button
-    </div>
-  )
+    <button
+      type="button"
+      className={className}
+      disabled={disabled}
+      onClick={onClick}
+    >
+      {children}
+    </button>
+  );
 }
 
-export default Button
+Button.defaultProps = {
+  disabled: false,
+};
+
+export default Button;

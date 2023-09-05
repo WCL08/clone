@@ -1,9 +1,9 @@
 .firstBoxContainer{
-    margin: 40px auto 0px auto;
+    margin: 100px auto 0px auto;
     border: 1px solid #dfdfdf;
     height: 400px;
     width: 350px;
-}
+
 .instagramLogo{
     margin: 20px auto;
     width: 200px;
@@ -18,9 +18,18 @@
 .instaLogo{
     width: 200px;
 }
+.loginInput{
+    height: 36px;
+    width: 268px;
+    margin: 5px 40px 10px 40px;
+}
+}
 .secondBox{
     margin: 10px auto;
     border: 1px solid #dfdfdf;
     height: 65px;
     width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
